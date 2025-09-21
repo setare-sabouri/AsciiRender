@@ -9,10 +9,19 @@ const Zebra = () => {
     const scroll = useScroll()
     const meshRef = useRef()
 
-    useFrame((state, delta) => {
-        const offset = scroll.offset
-        meshRef.current.rotation.y = 2 - offset * 4
+  useFrame(() => {
+    const offset = scroll.offset
 
+    // Only visible in first 2 pages . each page is 0.25 as for 4 pages
+    meshRef.current.visible = offset < 0.5
+
+    if (meshRef.current.visible) {
+      // Move down smoothly with scroll
+      meshRef.current.position.y = -1 - offset *10   // adjust multiplier for speed
+      meshRef.current.rotation.y = 2 - offset * 4
+      meshRef.current.position.z = offset * 4
+
+    }
     })
 
     return (

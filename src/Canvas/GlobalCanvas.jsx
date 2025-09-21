@@ -21,7 +21,7 @@ export default function Canvas3D() {
         {ShowAscii && ( 
           <AsciiRenderer
             fgColor="white"
-            bgColor="black"
+            bgColor="transparent"
             // characters=" &  ◼︎"
             // resolution={0.3}
             invert={Inverted}
