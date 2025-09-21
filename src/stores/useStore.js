@@ -11,5 +11,8 @@ export const useStore = create((set) => ({
   ShowAscii: true,
   setShowAscii: (ShowAscii) => set({ ShowAscii }),
 
+  Inverted:false,
+  setInverted:(Inverted)=>set({Inverted})
+
 
 }));

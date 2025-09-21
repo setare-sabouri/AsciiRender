@@ -1,5 +1,5 @@
 import {  Preload, Scroll, ScrollControls } from '@react-three/drei'
-import Modeldonno from './Model/Modeldonno'
+import Zebra from './Model/Modeldonno'
 
 
 
@@ -8,7 +8,7 @@ const Experience = () => {
     return (
         <>
             <ScrollControls horizontal={false} pages={4} damping={0.5}>
-                <Modeldonno/>
+                <Zebra/>
                 
                 <Scroll html>
                     <h1>html in here (optional)</h1>
