@@ -1,16 +1,17 @@
 import {  Preload, Scroll, ScrollControls } from '@react-three/drei'
 import Zebra from './Model/Zebra'
-
+import Earch from './Model/Earth'
 
 
 const Experience = () => {
+
 
     return (
         <>
             <ScrollControls horizontal={false} pages={4} damping={0.5}>
                 <Scroll>
                 <Zebra />
-
+                <Earch/>
                 </Scroll>
                 
                 <Scroll html>

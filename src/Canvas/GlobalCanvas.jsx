@@ -2,7 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import { Perf } from "r3f-perf";
 import styles from './CanvasGlobal.module.scss'
 import Experience from "../Components/Experience";
-import { AsciiRenderer, Environment, OrbitControls, Stage } from "@react-three/drei";
+import { AsciiRenderer, Environment } from "@react-three/drei";
 import { useStore } from "../stores/useStore";
 
 
@@ -14,19 +14,20 @@ export default function Canvas3D() {
     <div className={styles.canvasContainer} >
       <Canvas camera={{ position: [0, 1, 5], fov: 45 }} >
         <Perf />
-        <Environment preset="sunset"/>
-        {/* <ambientLight intensity={0.5}/> */}
+        <Environment preset="forest" />
+        <ambientLight intensity={10} />
         <Experience />
-
-        {ShowAscii && ( 
+       
+        {ShowAscii && (
           <AsciiRenderer
             fgColor="white"
-            bgColor="transparent"
-            // characters=" &  ◼︎"
-            // resolution={0.3}
+            bgColor="pink"
+            resolution={0.3}
             invert={Inverted}
+            
           />
         )}
+
 
       </Canvas>
     </div>
