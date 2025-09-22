@@ -6,13 +6,11 @@
   color: #00ff00;
   width: 100vw;
   height: 100vh;
-  pointer-events: none;
   position: relative;
   display: flex;
   flex-direction: column;
 
-
-    @include respond(mobile) {
+  @include respond(mobile) {
     justify-content: space-between;
   }
 
@@ -30,7 +28,7 @@
 
 
   @include respond(mobile) {
-    font-size: 3rem;
+    font-size: 2.4rem;
 
   }
 
@@ -41,7 +39,6 @@ p {
   padding: 10% 5%;
   font-size: 1.3rem;
   line-height: 46px;
-
 
   @include respond(mobile) {
     font-size: 1rem;
@@ -55,11 +52,8 @@ span {
   font-family: "Doto", sans-serif;
 }
 
-.AsciiBtn {
-  top: 35vh;
-  left: 5%;
 
-}
+
 
 // ---------------------------------- Second Page  
 
@@ -67,20 +61,7 @@ span {
   width: 100vw;
   height: 100vh;
 
-}
 
-.Btn {
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  position: relative;
-  pointer-events: auto;
-  font-size: 24px;
-  color: #00ff00;
-  background-color: #000;
-  border: 2px solid #00ff00;
-  width: fit-content;
-
-  /* ASCII-style text effect */
   font-family: 'Doto', Courier, monospace;
   text-shadow:
     1px 1px 0 #000,
@@ -89,10 +70,27 @@ span {
 
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.Btn {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+  pointer-events: auto;
+  color: #00ff00;
+  background-color: #000;
+  border: 2px solid #00ff00;
+  width: fit-content;
+
+  /* ASCII-style text effect */
+  font-family: 'Doto', Courier, monospace;
+
+
+  cursor: pointer;
+  transition: all 0.2s ease;
 
   @include respond(mobile) {
-  font-size: 16px;
-  padding: 0.8rem 1rem;
+    padding: 0.8rem 1rem;
   }
 
 }
@@ -106,17 +104,44 @@ span {
 
 
 .InvertBtn {
-  left: 70%;
+  font-size: 24px;
+  left: 60%;
   top: 75vh;
+
   @include respond(mobile) {
-  top: 90vh;
-  left: 50%;
-
+    font-size: 16px;
+    top: 100vh;
+    left: 10%;
   }
-
 }
 
 
+.AsciiBtn {
+  font-size: 24px;
+  top: 35vh;
+  left: 5%;
+    @include respond(mobile) {
+    font-size: 16px;
+  }
+}
+
+form{
+  font-size: 24px;
+  left: 5%;
+  position: relative;
+
+  @include respond(mobile) {
+  font-size: 12px;
+  top: 10vh;
+  }
+
+  p {
+    margin-top: 0;
+    text-shadow: none;
+    padding: 0;
+  }
+
+}
 // ----------------------------------  Third Page 
 
 .ThirdPage {

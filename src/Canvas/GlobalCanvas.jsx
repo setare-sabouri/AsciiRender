@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 
 
 export default function Canvas3D() {
-  const { ShowAscii,Inverted } = useStore()
+  const { ShowAscii,Inverted,CharsValue } = useStore()
 
 
   return (
@@ -23,8 +23,9 @@ export default function Canvas3D() {
           <AsciiRenderer
             fgColor="rgb(0, 255, 0);"
             bgColor="transparent"
-            resolution={0.3}
+            resolution={0.2}
             invert={Inverted}
+            characters={CharsValue}
           />
         )}
 

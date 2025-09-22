@@ -12,7 +12,10 @@ export const useStore = create((set) => ({
   setShowAscii: (ShowAscii) => set({ ShowAscii }),
 
   Inverted:false,
-  setInverted:(Inverted)=>set({Inverted})
+  setInverted:(Inverted)=>set({Inverted}),
+
+  CharsValue:' .:-+*=%@#',
+  setCharsValue:(CharsValue)=>set({CharsValue})
 
 
 }));
