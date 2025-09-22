@@ -6,9 +6,6 @@ import { Suspense } from 'react'
 import ThirdPage from '../Interface/ThirdPage'
 
 import Monster from './Model/Monster'
-import PlaceHolder from './Model/PlaceHolder'
-
-
 
 const Experience = () => {
 
@@ -18,7 +15,7 @@ const Experience = () => {
             <ScrollControls horizontal={false} pages={3} damping={0.5}>
                 <Scroll>
                     <Zebra />
-                    <Suspense fallback={<PlaceHolder scale={2}/>}>
+                    <Suspense>
                         <Monster />
                     </Suspense>
                 </Scroll>

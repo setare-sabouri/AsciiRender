@@ -4,7 +4,6 @@ import styles from './CanvasGlobal.module.scss'
 import Experience from "../Components/Experience";
 import { AsciiRenderer, Environment } from "@react-three/drei";
 import { useStore } from "../stores/useStore";
-import { useEffect, useRef } from "react";
 
 
 export default function Canvas3D() {
