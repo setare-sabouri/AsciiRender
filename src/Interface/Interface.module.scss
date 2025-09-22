@@ -1,25 +1,99 @@
-.Interface {
-    z-index: 2;
-    font-size: 2rem;
-    color: rgb(75, 9, 91);
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  
+//add pointer-events: auto; to inspect  and a background: rgba(255, 0, 0, 0.2);
+    
+
+.FirstPage {
+    color: #00ff00;
+    width: 100vw;
+    height: 100vh;
     pointer-events: none;
+    position: relative;
 }
 
 .title {
-    padding: 5%;
-    
-}
-
-.AsciiBtn {
-    background-color: 'pink';
-    padding: 1rem;
-    border-radius: 1rem;
     position: relative;
+    padding:0 5%;
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-variation-settings:
+        "ROND" 0;
+    font-size: 5rem;
+
+}
+ p {
+  color: white;
+    padding:10% 5%;
+    font-size: 1.3rem;
+    line-height: 46px;
+ }
+ span{
+  color: #00ff00;
+  font-family: "Doto", sans-serif;
+ }
+
+ .AsciiBtn {
+    top:35vh;
     left: 5%;
-    pointer-events: auto;
 
 }
 
+// Second Page  
+
+.SecondPage{
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+.Btn{
+    padding: 1rem;
+    border-radius: 2rem;
+    pointer-events: auto;
+    font-size: 16px;
+    color: #fff;
+}
+
+.InvertBtn{
+    left: 50%;
+    top: 75vh;
+    
+
+}
+
+
+.Btn {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+  pointer-events: auto;
+  font-size: 24px;
+  color: #00ff00;
+  background-color: #000; 
+  border: 2px solid #00ff00;
+
+  /* ASCII-style text effect */
+  font-family: 'Doto', Courier, monospace;
+  text-shadow:
+    1px 1px 0 #000,
+    2px 2px 0 #fa3f01,
+    3px 3px 0 #000;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect for retro vibe */
+.Btn:hover {
+  color: #000;
+  background-color: #00ff00;
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00 inset;
+  border-color: #00ff00;
+}
+
+
+//  Third Page 
+
+// .ThirdPage{
+//   height: 200vh;
+// }
