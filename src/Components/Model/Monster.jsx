@@ -1,19 +1,17 @@
 import { useAnimations, useGLTF, useScroll } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
+import useBreakpoint from '../../stores/useBreakpoint'
 
-const Earch = () => {
+const Monster = () => {
     const DogMdl = useGLTF('./models/alien.glb')
     const Animations = useAnimations(DogMdl.animations, DogMdl.scene)
-    const scroll = useScroll()
     const meshRef = useRef()
 
-
-
     const WalkinAction = Animations.actions['Rig-Alien-Animal|Walk-Cycle'];
-        WalkinAction.reset().fadeIn(0.5).play()
+    WalkinAction.reset().fadeIn(0.5).play()
 
-       const ClickHandler = () => {
+    const ClickHandler = () => {
         const runAction = Animations.actions['Rig-Alien-Animal|Run-Cycle']
         if (!runAction || !WalkinAction) return
 
@@ -28,13 +26,21 @@ const Earch = () => {
         }, 2000)
     }
 
+    // responsive 
+    const breakpoint = useBreakpoint()
+
     return (
         <>
-            <primitive onClick={ClickHandler} ref={meshRef} rotation={[0, 1.5, 0]} position={[-2, -6, 0]} scale={0.5} object={DogMdl.scene} />
-
+            <primitive
+                onClick={ClickHandler}
+                ref={meshRef} rotation={[0, 1.5, 0]}
+                position={breakpoint==='mobile'?[0,-5,0]:[-1.6, -6, 0]}
+                scale={breakpoint === 'mobile'? 0.2 : 0.4}
+                object={DogMdl.scene} 
+            />
         </>
 
     )
 }
 
-export default Earch
+export default Monster

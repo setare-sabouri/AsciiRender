@@ -1,66 +1,73 @@
-  
+@use "../breakpoints" as *;
 //add pointer-events: auto; to inspect  and a background: rgba(255, 0, 0, 0.2);
-    
+
 
 .FirstPage {
-    color: #00ff00;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    position: relative;
+  color: #00ff00;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+
+    @include respond(mobile) {
+    justify-content: space-between;
+  }
+
 }
 
 .title {
-    position: relative;
-    padding:0 5%;
-    font-family: "Doto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-variation-settings:
-        "ROND" 0;
-    font-size: 5rem;
+  position: relative;
+  padding: 0 5%;
+  font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-variation-settings:
+    "ROND" 0;
+  font-size: 5rem;
+
+
+  @include respond(mobile) {
+    font-size: 3rem;
+
+  }
 
 }
- p {
+
+p {
   color: white;
-    padding:10% 5%;
-    font-size: 1.3rem;
-    line-height: 46px;
- }
- span{
+  padding: 10% 5%;
+  font-size: 1.3rem;
+  line-height: 46px;
+
+
+  @include respond(mobile) {
+    font-size: 1rem;
+    margin-top: 14rem;
+  }
+
+}
+
+span {
   color: #00ff00;
   font-family: "Doto", sans-serif;
- }
+}
 
- .AsciiBtn {
-    top:35vh;
-    left: 5%;
+.AsciiBtn {
+  top: 35vh;
+  left: 5%;
 
 }
 
-// Second Page  
+// ---------------------------------- Second Page  
 
-.SecondPage{
+.SecondPage {
   width: 100vw;
   height: 100vh;
-  
-}
-
-.Btn{
-    padding: 1rem;
-    border-radius: 2rem;
-    pointer-events: auto;
-    font-size: 16px;
-    color: #fff;
-}
-
-.InvertBtn{
-    left: 70%;
-    top: 75vh;
-    
 
 }
-
 
 .Btn {
   padding: 1rem 2rem;
@@ -69,8 +76,9 @@
   pointer-events: auto;
   font-size: 24px;
   color: #00ff00;
-  background-color: #000; 
+  background-color: #000;
   border: 2px solid #00ff00;
+  width: fit-content;
 
   /* ASCII-style text effect */
   font-family: 'Doto', Courier, monospace;
@@ -81,9 +89,14 @@
 
   cursor: pointer;
   transition: all 0.2s ease;
+
+  @include respond(mobile) {
+  font-size: 16px;
+  padding: 0.8rem 1rem;
+  }
+
 }
 
-/* Hover effect for retro vibe */
 .Btn:hover {
   color: #000;
   background-color: #00ff00;
@@ -92,10 +105,32 @@
 }
 
 
-//  Third Page 
+.InvertBtn {
+  left: 70%;
+  top: 75vh;
+  @include respond(mobile) {
+  top: 90vh;
+  left: 50%;
 
-.ThirdPage{
+  }
+
+}
+
+
+// ----------------------------------  Third Page 
+
+.ThirdPage {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+a {
+  color: rgb(29, 206, 47);
+  transition: transform 0.3s;
+
+  &:hover {
+    color: rgb(74, 123, 79);
+    transform: scale(1.2);
+  }
 }
