@@ -55,7 +55,7 @@
 }
 
 .InvertBtn{
-    left: 50%;
+    left: 70%;
     top: 75vh;
     
 
@@ -94,6 +94,8 @@
 
 //  Third Page 
 
-// .ThirdPage{
-//   height: 200vh;
-// }
+.ThirdPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

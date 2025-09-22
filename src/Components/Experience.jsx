@@ -5,7 +5,7 @@ import FirstPage from '../Interface/FirstPage'
 import { Suspense } from 'react'
 import ThirdPage from '../Interface/ThirdPage'
 
-// import Earch from './Model/Earth'
+import Earch from './Model/Earth'
 
 
 
@@ -17,7 +17,7 @@ const Experience = () => {
             <ScrollControls horizontal={false} pages={3} damping={0.5}>
                 <Scroll>
                 <Zebra />
-                {/* <Earch/> */}
+                <Earch/>
                 </Scroll>
                 
                 <Scroll html>
