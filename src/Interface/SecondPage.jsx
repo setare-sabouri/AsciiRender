@@ -35,7 +35,7 @@ const SecondPage = () => {
                     name="characters"
                     value={localInput}
                     onChange={handleChange}
-                    placeholder="Any character you like"
+                    placeholder="Anything you like"
                     className={`${styles.Btn}`}
                 />
                 <input
